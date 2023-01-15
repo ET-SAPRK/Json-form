@@ -1,0 +1,132 @@
+#student-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: float-label 0.5s ease-in-out;
+}
+
+input:focus+label {
+    transform: translateY(-20px);
+    font-size: 12px;
+}
+
+@keyframes float-label {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="text"]:invalid {
+    border: 1px solid #f44336;
+}
+
+input[type="text"]:valid {
+    border: 1px solid #4CAF50;
+}
+
+#headers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#transparent-div {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* white color with 50% transparency */
+}
+
+.background-container {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(to right, #ff0000, #ffff00);
+    animation: background-gradient 10s ease-in-out infinite;
+}
+
+@keyframes background-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-button {
+    background: linear-gradient(to right, #ff0000, #ffff00);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(to right, #ffff00, #0000ff);
+    transform: scale(1.1);
+}
+
+.awesome-header {
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    color: black;
+    background-image: linear-gradient(to right, #ff0000, #ffff00);
+    -webkit-background-clip: text;
+    animation: shine 2s linear infinite;
+    z-index: 1;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200%;
+    }
+}
